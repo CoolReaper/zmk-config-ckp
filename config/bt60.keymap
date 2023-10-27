@@ -14,9 +14,9 @@
 			, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp_N8>
 			, <&macro_release &kp LALT>
 			;
-		    };
 		};
-	    };
+	};
+	    
 	keymap {
 		compatible = "zmk,keymap";
 
