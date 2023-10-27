@@ -7,22 +7,6 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
-		macro caps_macro {
-    			sequence = {
-        			K_BACKLIGHT_TOGGLE,  // Command to turn the backlight red (specific to your hardware)
-        			K_CAPSLOCK,  // Command to enable CAPS LOCK
-    			};
-		};
-		macro alt_o_0248 {
-		    sequence = {
-		        K_LALT,  // Press and hold Left Alt
-		        K_0,     // Press '0'
-		        K_2,     // Press '2'
-		        K_4,     // Press '4'
-		        K_8,     // Press '8'
-		        K_RALT   // Release Left Alt
-		    };
-		};
 
 		default_layer {
 				// ------------------------------------------------------------------------------------------
