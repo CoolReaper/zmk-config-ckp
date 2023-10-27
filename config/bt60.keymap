@@ -9,6 +9,7 @@
 		alt_o_0248: alt_o_0248 {
 		    label = "ZM_alt_o_0248";
 		    compatible = "zmk,behavior-macro";
+		    #binding-cells = <0>;
 		    bindings 
 			= <&macro_press &kp LALT>
 			, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N8>
