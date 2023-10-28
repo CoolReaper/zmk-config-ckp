@@ -22,8 +22,8 @@
 		    #binding-cells = <0>;
 		    bindings 
 			= <&macro_tap &kp CAPS>
-			, <&macro_tap &rg_ug RGB_COLOR_HSB(0, 100, 50)>
-			, <&macro_tap &rg_ug RGB_TOG>
+			, <&macro_tap &rgb_ug RGB_COLOR_HSB(0, 100, 50)>
+			, <&macro_tap &rgb_ug RGB_TOG>
 			;
 		};
 	};
