@@ -61,7 +61,7 @@
 		};
 		higher {
 			bindings = <
-				&kp KP_NUM &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &trans &trans &reset
+				&kp KP_NUM &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &trans &trans &sys_reset
 				&trans &kp K_VOL_UP &bl BL_ON  &bl BL_INC &trans &trans &kp PG_UP &trans &trans &alt_o_0248 &bt BT_PRV &bt BT_NXT &bt BT_CLR
 				&trans    &kp K_VOL_DN &bl BL_OFF &bl BL_DEC &trans &trans &kp PG_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &bt BT_SEL 4  &bootloader
 				&CAPSLIGHT &kp K_MUTE &trans &bl BL_TOG &trans &bl BL_DEC &trans &trans &trans &trans &trans &trans  &trans
