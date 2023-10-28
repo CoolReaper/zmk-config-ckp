@@ -16,6 +16,16 @@
 			, <&macro_release &kp LALT>
 			;
 		};
+		CAPSLIGHT: CAPSLIGHT {
+		    label = "ZM_CAPSLIGHT";
+		    compatible = "zmk,behavior-macro";
+		    #binding-cells = <0>;
+		    bindings 
+			= <&macro_tap &kp CAPS>
+			, <&macro_tap &rg_ug RGB_COLOR_HSB(0, 100, 50)>
+			, <&macro_tap &rg_ug RGB_TOG>
+			;
+		};
 	};
 	    
 	keymap {
@@ -48,6 +58,10 @@
 				&bt BT_PRV &bt BT_NXT  &trans              &trans                            &trans   &trans   &sys_reset &bt BT_CLR
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+		};
+		higher {
+			bindings = <
+			>;
 		};
 	};
 };
