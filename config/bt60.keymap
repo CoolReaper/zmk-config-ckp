@@ -16,6 +16,18 @@
 			, <&macro_release &kp LALT>
 			;
 		};
+		email: email {
+		    label = "email";
+		    compatible = "zmk,behavior-macro";
+		    #binding-cells = <0>;
+		    bindings 
+			=  <&macro_tap &kp A &kp L &kp E &kp X &kp K &kp I &kp C &kp K &kp E &kp R>
+			, <&macro_press &kp RALT>
+			, <&macro_tap &kp N2>
+			, <&macro_release &kp RALT>
+			, <&macro_tap &kp H &kp O &kp T &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
+			;
+		};
 		CAPSLIGHT: CAPSLIGHT {
 		    label = "ZM_CAPSLIGHT";
 		    compatible = "zmk,behavior-macro";
@@ -62,9 +74,9 @@
 		higher {
 			bindings = <
 				&kp KP_NUM &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &trans &trans &sys_reset
-				&trans &kp K_VOL_UP &bl BL_ON  &bl BL_INC &trans &trans &kp PG_UP &trans &trans &alt_o_0248 &bt BT_PRV &bt BT_NXT &bt BT_CLR
-				&trans    &kp K_VOL_DN &bl BL_OFF &bl BL_DEC &trans &trans &kp PG_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &bt BT_SEL 4  &bootloader
-				&CAPSLIGHT &kp K_MUTE &trans &bl BL_TOG &trans &bl BL_DEC &trans &trans &trans &trans &trans &trans  &trans
+				&trans &kp C_VOL_UP &bl BL_ON  &bl BL_INC &trans &trans &kp PG_UP &trans &trans &alt_o_0248 &bt BT_PRV &bt BT_NXT &bt BT_CLR
+				&trans    &kp C_VOL_DN &bl BL_OFF &bl BL_DEC &trans &trans &kp PG_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &bt BT_SEL 4  &bootloader
+				&CAPSLIGHT &kp C_MUTE &trans &bl BL_TOG &trans &bl BL_DEC &trans &trans &email &trans &trans &trans  &trans
 				&kp LCTRL &trans &kp LALT            &kp SPACE                          &kp RALT  &kp RGUI &trans &kp RCTRL
 			>;
 		};
