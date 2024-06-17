@@ -68,7 +68,7 @@
 				&kp LSHFT &kp NON_US_BSLH &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH         &kp RSHFT
 				&kp LCTRL &mo 1 &kp LALT            &kp SPACE                          &kp RALT  &kp RGUI &mo 1 &kp RCTRL
 			>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 		raise {
 			bindings = <
@@ -78,7 +78,7 @@
 				&kp LSHFT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bl BL_INC &bl BL_DEC &trans &trans &trans &rgb_ug RGB_TOG &kp END &kp PG_DN  &bl BL_TOG
 				&kp LCTRL &trans &kp LALT            &kp SPACE                          &kp RALT  &kp RGUI &trans &kp RCTRL
 			>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 		higher {
 			bindings = <
