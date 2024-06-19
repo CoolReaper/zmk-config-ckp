@@ -73,7 +73,7 @@
 		raise {
 			bindings = <
 				&kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
-				&trans &trans &kp UP &trans &kp INS &kp HOME &kp PG_UP &trans &trans &trans &kp PSCRN &kp UP &kp PAUSE_BREAK
+				&trans &trans &kp UP &trans &kp INS &kp HOME &kp PG_UP &trans &trans &kp LNLCK &kp PSCRN &kp UP &kp PAUSE_BREAK
 				&CAPSLIGHT    &kp LEFT &kp DOWN &kp RIGHT &trans &kp END &kp PG_DN &trans &trans &Win_Lock &kp LEFT  &kp DOWN &kp RIGHT  &kp RET
 				&kp LSHFT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bl BL_INC &bl BL_DEC &trans &trans &trans &rgb_ug RGB_TOG &kp END &kp PG_DN  &bl BL_TOG
 				&kp LCTRL &trans &kp LALT            &kp SPACE                          &kp RALT  &kp RGUI &trans &kp RCTRL
