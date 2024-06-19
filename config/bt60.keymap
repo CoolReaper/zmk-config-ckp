@@ -45,6 +45,7 @@
 		    bindings 
 			= <&macro_press &kp RGUI>
 			, <&macro_tap &kp L>
+			, <&macro_release &kp RGUI>
 			;
 		};
 	};
