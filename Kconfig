@@ -1,1 +1,9 @@
+config CAPS_INDICATOR
+    bool "Caps Lock reflected on RGB underglow"
+    default y
+    depends on ZMK_RGB_UNDERGLOW && ZMK_HID_INDICATORS
 
+config NUMLOCK_ALTCODE
+    bool "Num Lock-aware alt-code behavior"
+    default y
+    depends on ZMK_HID_INDICATORS
