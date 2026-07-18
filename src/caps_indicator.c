@@ -1,1 +1,28 @@
+// src/caps_indicator.c
+#include <zephyr/kernel.h>
+#include <zmk/event_manager.h>
+#include <zmk/events/hid_indicators_changed.h>   // confirmar nome exato do ficheiro/evento
+#include <zmk/rgb_underglow.h>
+#include <dt-bindings/zmk/hid_indicators.h>
 
+static int caps_indicator_listener(const zmk_event_t *eh) {
+    const struct zmk_hid_indicators_changed *ev = as_zmk_hid_indicators_changed(eh);
+    if (ev == NULL) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    bool caps_on = ev->indicators & HID_INDICATOR_CAPS_LOCK;   // confirmar o teste de bit contra a struct real
+
+    if (caps_on) {
+        struct zmk_led_hsb color = {.h = 0, .s = 100, .b = 50}; // vermelho
+        zmk_rgb_underglow_set_hsb(color);
+        zmk_rgb_underglow_on();
+    } else {
+        zmk_rgb_underglow_off();
+    }
+
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(caps_indicator, caps_indicator_listener);
+ZMK_SUBSCRIPTION(caps_indicator, zmk_hid_indicators_changed);
