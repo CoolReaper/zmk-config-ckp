@@ -1,1 +1,3 @@
-
+zephyr_library()
+zephyr_library_sources_ifdef(CONFIG_CAPS_INDICATOR src/caps_indicator.c)
+zephyr_library_sources_ifdef(CONFIG_NUMLOCK_ALTCODE src/numlock_altcode.c)
