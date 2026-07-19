@@ -1,0 +1,3 @@
+description: Num Lock-aware Alt-code 0248 behavior
+compatible: "zmk,behavior-altcode-0248"
+include: zero_param.yaml
