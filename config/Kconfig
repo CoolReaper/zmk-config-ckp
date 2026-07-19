@@ -6,4 +6,4 @@ config CAPS_INDICATOR
 config NUMLOCK_ALTCODE
     bool "Num Lock-aware alt-code behavior"
     default y
-    depends on ZMK_HID_INDICATORS
+    depends on ZMK_HID_INDICATORS && DT_HAS_ZMK_BEHAVIOR_ALTCODE_0248_ENABLED
