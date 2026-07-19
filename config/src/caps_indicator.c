@@ -2,7 +2,10 @@
 #include <zmk/event_manager.h>
 #include <zmk/events/hid_indicators_changed.h>
 #include <zmk/rgb_underglow.h>
-#include <dt-bindings/zmk/hid_indicators.h>
+
+#define HID_INDICATOR_NUM_LOCK    (1 << 0)
+#define HID_INDICATOR_CAPS_LOCK   (1 << 1)
+#define HID_INDICATOR_SCROLL_LOCK (1 << 2)
 
 static int caps_indicator_listener(const zmk_event_t *eh) {
     const struct zmk_hid_indicators_changed *ev = as_zmk_hid_indicators_changed(eh);
