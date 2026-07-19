@@ -10,8 +10,11 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/hid.h>
 #include <zmk/endpoints.h>
 #include <zmk/hid_indicators.h>
-#include <dt-bindings/zmk/hid_indicators.h>
 #include <dt-bindings/zmk/keys.h>
+
+#define HID_INDICATOR_NUM_LOCK    (1 << 0)
+#define HID_INDICATOR_CAPS_LOCK   (1 << 1)
+#define HID_INDICATOR_SCROLL_LOCK (1 << 2)
 
 #if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
 
