@@ -50,6 +50,11 @@ static int on_altcode_0248_binding_pressed(struct zmk_behavior_binding *binding,
     zmk_endpoints_send_report(HID_USAGE_KEY);
     k_msleep(30);
 
+    zmk_hid_keyboard_clear();
+    zmk_endpoints_send_report(HID_USAGE_KEY);
+    
+    k_msleep(30);
+    
     if (!numlock_was_on) {
         tap_key(KP_NUM);
     }
