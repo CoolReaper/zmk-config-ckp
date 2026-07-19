@@ -1,8 +1,7 @@
-// src/numlock_altcode.c
 #include <zephyr/kernel.h>
 #include <zmk/hid.h>
 #include <zmk/endpoints.h>
-#include <zmk/hid_indicators.h>       // para ler o estado atual
+#include <zmk/hid_indicators.h>
 #include <dt-bindings/zmk/hid_indicators.h>
 #include <dt-bindings/zmk/keys.h>
 
@@ -15,11 +14,11 @@ static void tap_key(uint32_t usage) {
 
 static int altcode_0248_pressed(struct zmk_behavior_binding *binding,
                                  struct zmk_behavior_binding_event event) {
-    bool numlock_was_on = /* estado atual do indicador tem HID_INDICATOR_NUM_LOCK, confirmar getter */;
+    bool numlock_was_on = zmk_hid_indicators_get_current_profile() & HID_INDICATOR_NUM_LOCK;
 
     if (!numlock_was_on) {
         tap_key(KP_NUM);
-        k_msleep(20); // dar tempo ao host para confirmar o toggle antes de continuarmos
+        k_msleep(20);
     }
 
     zmk_hid_keyboard_press(LALT);
@@ -34,5 +33,3 @@ static int altcode_0248_pressed(struct zmk_behavior_binding *binding,
 
     return ZMK_BEHAVIOR_OPAQUE;
 }
-
-// registar como zmk,behavior-* com binding-cells = <0>, ligar binding_pressed a altcode_0248_pressed
