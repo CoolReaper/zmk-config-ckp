@@ -21,8 +21,10 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 static void tap_key(uint32_t usage) {
     zmk_hid_keyboard_press(usage);
     zmk_endpoints_send_report(HID_USAGE_KEY);
+    k_msleep(5);
     zmk_hid_keyboard_release(usage);
     zmk_endpoints_send_report(HID_USAGE_KEY);
+    k_msleep(5);
 }
 
 static int on_altcode_0248_binding_pressed(struct zmk_behavior_binding *binding,
@@ -36,12 +38,16 @@ static int on_altcode_0248_binding_pressed(struct zmk_behavior_binding *binding,
 
     zmk_hid_keyboard_press(LALT);
     zmk_endpoints_send_report(HID_USAGE_KEY);
+    k_msleep(5);
+
     tap_key(KP_N0);
     tap_key(KP_N2);
     tap_key(KP_N4);
     tap_key(KP_N8);
+
     zmk_hid_keyboard_release(LALT);
     zmk_endpoints_send_report(HID_USAGE_KEY);
+    k_msleep(5);
 
     if (!numlock_was_on) {
         tap_key(KP_NUM);
