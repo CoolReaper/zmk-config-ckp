@@ -16,7 +16,7 @@ static int caps_indicator_listener(const zmk_event_t *eh) {
     bool caps_on = ev->indicators & HID_INDICATOR_CAPS_LOCK;
 
     if (caps_on) {
-        zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){.h = 0, .s = 100, .b = 50});
+        zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){.h = 120, .s = 100, .b = 50});
     } else {
         zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){.h = 0, .s = 0, .b = 0});
     }
