@@ -13,11 +13,9 @@ static int caps_indicator_listener(const zmk_event_t *eh) {
     bool caps_on = ev->indicators & HID_INDICATOR_CAPS_LOCK;
 
     if (caps_on) {
-        struct zmk_led_hsb color = {.h = 0, .s = 100, .b = 50};
-        zmk_rgb_underglow_set_hsb(color);
-        zmk_rgb_underglow_on();
+        zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){.h = 0, .s = 100, .b = 50});
     } else {
-        zmk_rgb_underglow_off();
+        zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){.h = 0, .s = 0, .b = 0});
     }
 
     return ZMK_EV_EVENT_BUBBLE;
